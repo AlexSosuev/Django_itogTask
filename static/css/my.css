@@ -1,0 +1,18 @@
+.recipe {
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.content {
+    flex: 1 1 auto;
+}
+
+.image_img {
+    width: 600px;
+    height: 400px;
+}

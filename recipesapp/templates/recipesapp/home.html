@@ -1,0 +1,15 @@
+{% extends 'recipesapp/base.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}    
+    {% for category in categories %}        
+        <ul class="list-group">
+            {% for recipe in recipe_relationships %}
+                {% if recipe.category == category %}
+                    <li class="list-group-item"><a href="{% url 'recipesapp:recipe_detail' recipe.recipe.id %}">{{ recipe.recipe.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endfor %}    
+{% endblock %}

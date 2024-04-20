@@ -1,0 +1,20 @@
+{% extends 'recipesapp/base.html' %}
+
+{% block title %}Редактировать рецепт{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>Добавить рецепт</h2>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="form-group">
+                {{ field.label_tag }}
+                {{ field }}
+            </div>
+            {% endfor %}
+            <p><b>ВНИМАНИЕ!!!</b> Не забудьте выбрать категорию, к сожалению, функция сохранения старой категории находится в разрвботке</p>
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+        </form>
+    </div>
+{% endblock %}
