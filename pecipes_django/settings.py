@@ -5,20 +5,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = 'c=n5m+^%sge++x-0(g&_zix!biem3)5!z!b!-n!o^h+$r-j5bf'
 
-DEBUG = False
-SESSION_COOKIE_SECURE = True
-CSRF_COOKEI_SECURE = True
+DEBUG = True
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKEI_SECURE = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'SAlexVRecipes.pythonanywhere.com',
+    # 'SAlexVRecipes.pythonanywhere.com',
 ]
 
-INTERNAL_IPS = [
-    '127.0.0.1',
-]
+# INTERNAL_IPS = [
+#     '127.0.0.1',
+# ]
 
 
 INSTALLED_APPS = [
@@ -95,12 +95,12 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static/'
+# STATIC_ROOT = BASE_DIR / 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-MEDIA_URL = '/medis/'
-MEDIA_ROOT = BASE_DIR / 'media/'
+MEDIA_URL = './'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'img')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
